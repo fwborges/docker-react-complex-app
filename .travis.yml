@@ -15,7 +15,7 @@ after_sucess:
     - docker build -t fwborges/multi-server ./server
     - docker build -t fwborges/multi-worker ./worker
     #Log in to the docker CLI
-    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --pasword-stdin
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     #Take those images and push to docker hub
     - docker push fwborges/multi-client
     - docker push fwborges/multi-nginx
